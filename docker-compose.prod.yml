@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - 3030:3000
+    command: ./scripts/start_prod
+    volumes:
+      - "node_modules:/opt/bot/node_modules"
+      - "yarn_cache:/usr/local/share/.cache/yarn"
+    environment:
+      - NODE_ENV=development
+      - NODE_PORT=3000
+      - BOT_TOKEN=325809574:AAGpdF5egSqmwoHnVKTT8rXWD4NX4GPeDDA
+volumes:
+  node_modules:
+  yarn_cache:

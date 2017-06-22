@@ -1,0 +1,7 @@
+#!/bin/bash
+
+yarn install
+
+#npm rebuild
+
+npm run dev

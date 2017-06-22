@@ -1,0 +1,30 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --exec 'npm run babel'",
+    "babel": "./node_modules/babel-cli/bin/babel-node.js index.js",
+    "prod": "pm2 start --interpreter babel-node index.js",
+    "lint": "./node_modules/eslint/bin/eslint.js ."
+  },
+  "dependencies": {
+    "node-fetch": "^1.7.1",
+    "telegraf": "^3.7.4",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-node7": "^1.5.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-runtime": "^6.23.0",
+    "eslint": "^4.0.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-class-property": "^1.0.6",
+    "eslint-plugin-import": "^2.3.0"
+  }
+}
